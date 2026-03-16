@@ -135,9 +135,9 @@ h2 {
 
 .project-card {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
-  align-items: center;
+  align-items: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 22px;
