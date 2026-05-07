@@ -11,6 +11,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <span class="nav-brand">Benjamin Thorne</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="container">
       <p class="eyebrow">Engineering Portfolio</p>
@@ -31,24 +44,24 @@
   </header>
 
   <main>
-    <section class="section">
+    <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
         <p>
           My work sits at the intersection of mechanics, materials, and experiments. During my PhD, I have built instruments to study heterogeneous wetting
-          on complex surfaces, built models based on experimental data for composite hydrogels, and studied friction and energy dissipation in Euler's disk, 
-          a popular physics toy. 
+          on complex surfaces, built models based on experimental data for composite hydrogels, and studied friction and energy dissipation in Euler's disk,
+          a popular physics toy.
         </p>
       </div>
     </section>
 
-    <section class="section alt">
+    <section id="skills" class="section alt">
       <div class="container">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
           <div class="skill-card">
             <h3>Experiments</h3>
-            <p>Confocal microscopy, rheology, mechanical testing, high-speed imaging, 3D-motion tracking, machining and fabrication, atomic force microscopy, microfluidics, soft-lithography, cell/bacteria culture, ink-jet printing </p>
+            <p>Confocal microscopy, rheology, mechanical testing, high-speed imaging, 3D-motion tracking, machining and fabrication, atomic force microscopy, microfluidics, soft-lithography, cell/bacteria culture, ink-jet printing</p>
           </div>
           <div class="skill-card">
             <h3>Theory/Computation</h3>
@@ -58,155 +71,192 @@
       </div>
     </section>
 
-    <section class="section">
-  <div class="container">
-    <h2>Selected Projects</h2>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Selected Projects</h2>
 
-    <article class="project-card">
-      <div class="project-text">
-        <p class="project-tag">Published Research</p>
-        <h3>Contact Angle Mapping Using Micro-Droplets</h3>
-        <p>
-          Built an automated system that deposits microdroplets on surfaces
-          to generate wettability maps for heterogeneous materials.
-        </p>
-        <ul>
-          <li>Designed an automated measurement platform for microdroplet deposition</li>
-          <li>Mapped local surface wettability with high spatial resolution</li>
-          <li>Developed a robust contact angle measurement pipeline for noisy images using a Two-head U-Net architecture trained on manually segmented data.</li>
-          <li>Relevant applications in coatings, geology, and biology</li>
-          <li><em>Langmuir</em> (2025)</li>
-        </ul>
+        <article class="project-card">
+          <div class="project-text">
+            <p class="project-tag">Published Research</p>
+            <h3>Contact Angle Mapping Using Micro-Droplets</h3>
+            <p>
+              Built an automated system that deposits microdroplets on surfaces
+              to generate wettability maps for heterogeneous materials.
+            </p>
+            <ul>
+              <li>Designed an automated measurement platform for microdroplet deposition</li>
+              <li>Mapped local surface wettability with high spatial resolution</li>
+              <li>Developed a robust contact angle measurement pipeline for noisy images using a Two-head U-Net architecture trained on manually segmented data</li>
+              <li>Relevant applications in coatings, geology, and biology</li>
+              <li><em>Langmuir</em> (2025)</li>
+            </ul>
+          </div>
+          <div class="project-media">
+            <div class="video-grid">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/g-1ZdLBxz2Y"
+                  title="Droplet deposition on patterned glass surface"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/eshTCWOJ3hI"
+                  title="Multiple micro-droplet deposition for advancing contact angle measurement"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="media-grid">
+              <figure class="media-item media-item-large">
+                <img src="images/shield (1).png" alt="Contact angle mapping experiment" />
+                <figcaption>Contact angle maps of wax-patterned glass surfaces. θ<sub>r</sub> indicates receding contact angle. θ<sub>a</sub> indicates advancing contact angle.</figcaption>
+              </figure>
+              <figure class="media-item media-item-large">
+                <img src="images/biofilm.png" alt="Wettability map" />
+                <figcaption>Bacillus Subtilis hydrophobic biofilm and corresponding wettability pattern.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-text">
+            <p class="project-tag">PhD Research</p>
+            <h3>Mechanics of Emulsion-Fiber Composites (in Preparation)</h3>
+            <p>
+              Experimental analysis and modeling of the rheology of fibrous hydrogels with embedded oil
+              droplets to understand how inclusions modify stiffness and mechanical response.
+            </p>
+            <ul>
+              <li>Investigated structure-property relationships in emulsion-fiber composites</li>
+              <li>Developed an analytical model for fiber network elasticity</li>
+              <li>Combined rheology, microscopy, and mechanical modeling</li>
+              <li>Relevant applications in cosmetics and food science</li>
+            </ul>
+          </div>
+          <div class="project-media">
+            <div class="video-grid">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/yxWfnkyMGHY"
+                  title="Sodium Myristate composite hydrogel compression with stress-strain curve"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/o6qM6zpVIL8"
+                  title="Rearrangement during compression of oil-in-fiber composites with unjammed and jammed droplets"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="media-grid">
+              <figure class="media-item media-item-large">
+                <img src="images/NaMy Pics.png" alt="Composite microstructure" />
+                <figcaption>A) Sodium Myristate network, B) Sodium Myristate network with diffusing oil droplets, C) Sodium Myristate with jammed oil droplets.</figcaption>
+              </figure>
+              <figure class="media-item">
+                <img src="images/NaMy Stiffness Portfolio.png" alt="Composite stiffness results" />
+                <figcaption>Storage modulus (stiffness) vs. Sodium Myristate concentration with power-law model.</figcaption>
+              </figure>
+              <figure class="media-item">
+                <img src="images/NaMy Comp.png" alt="Model and experiment comparison" />
+                <figcaption>Compressive stress vs. strain, with and without oil droplets. Insets show droplet coalescence at different strains.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-text">
+            <p class="project-tag">PhD Research</p>
+            <h3>Air Drag Controls the Finite-Time Singularity of Euler's Disk (in Review)</h3>
+            <p>
+              Experimental analysis of rolling resistance and aerodynamic drag
+              in spinning disks, with applications to mechanical design and
+              dissipative dynamics.
+            </p>
+            <ul>
+              <li>Studied competing mechanisms of energy loss in rotational motion</li>
+              <li>Custom-machined disks and rings and analyzed their motion using stereoscopic high-speed cameras</li>
+              <li>Preprint available on the <a href="https://arxiv.org/abs/2603.14520" target="_blank">arXiv</a></li>
+            </ul>
+          </div>
+          <div class="project-media">
+            <div class="video-grid">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/s8i_uF8sjF0"
+                  title="Euler disk on glass (slow motion)"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/TeWKjvexXG0?si=1pRQQb5DN-ImsFBq"
+                  title="Euler disk experiment"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="media-grid">
+              <figure class="media-item media-item-large">
+                <img src="images/euler disk portfolio.png" alt="Euler disk experiment" />
+                <figcaption>Experimental setup (top) and tilt-angle vs. time-until-stop for disks of varying mass on glass (bottom).</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-text">
+            <p class="project-tag">PhD Research</p>
+            <h3>Directed Motion Using Asymmetric Vibrations (Ongoing)</h3>
+            <p>
+              A friction-driven robotic positioning system that uses asymmetric vibrations to achieve
+              controlled, directed motion of small objects.
+            </p>
+            <ul>
+              <li>Designed and built a friction-driven robotic positioning system</li>
+              <li>Achieved directed motion using asymmetric vibration waveforms</li>
+              <li>Demonstrated precision manipulation of small objects via frictional ratcheting</li>
+            </ul>
+          </div>
+          <div class="project-media">
+            <div class="video-grid">
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/4u29VcTcDpE?si=FPP0btmiLHgEoYhC"
+                  title="Directed motion using asymmetric vibrations"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/P3i8TGkFDt8"
+                  title="Directed motion demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
+    </section>
 
-      <div class="project-media">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/g-1ZdLBxz2Y"
-            title="Droplet deposition on patterned glass surface."
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="project-media">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/eshTCWOJ3hI"
-            title="Multiple micro-droplet deposition for advancing contact angle measurement."
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="media-grid">
-          <figure class="media-item media-item-large">
-            <img src="images/shield (1).png" alt="Contact angle mapping experiment" />
-            <figcaption>Contact angle maps of wax-patterned glass surfaces. θ<sub>r</sub> indicates receding contact angle. θ<sub>a</sub> indicates advancing contact angle.</figcaption>
-          </figure>
-
-          <figure class="media-item media-item-large">
-            <img src="images/biofilm.png" alt="Wettability map" />
-            <figcaption>Bacillus Subtilis hydrophobic biofilm and corresponding wettability pattern.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-text">
-        <p class="project-tag">PhD Research</p>
-        <h3>Mechanics of Emulsion-Fiber Composites (in Preparation)</h3>
-        <p>
-          Experimental analysis and modeling of the rheology of fibrous hydrogels with embedded oil
-          droplets to understand how inclusions modify stiffness and mechanical response.
-        </p>
-        <ul>
-          <li>Investigated structure-property relationships in emulsion-fiber composites</li>
-          <li>Developped an analytical model for fiber network elasticity</li>
-          <li>Combined rheology, microscopy, and mechanical modeling</li>
-          <li>Relevant applications in cosmetics and food science</li>
-        </ul>
-      </div>
-
-      <div class="project-media">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/yxWfnkyMGHY"
-            title="Sodium Myristate composite hydrogel compression with stress-strain curve"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="project-media">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/o6qM6zpVIL8"
-            title="Rearrangement during compression of oil-in-fiber composites with unjammed and jammed droplets. "
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="media-grid">
-          <figure class="media-item media-item-large">
-            <img src="images/NaMy Pics.png" alt="Composite stiffness results" />
-            <figcaption> A) Sodium Myristate network, B) Sodium Myristate network with diffusing oil droplets C) Sodium Myristate with jammed oil droplets.</figcaption>
-          </figure>
-
-          <figure class="media-item">
-            <img src="images/NaMy Stiffness Portfolio.png" alt="Composite microstructure" />
-            <figcaption>Storage modulus (stiffness) vs. Sodium Myristate concentration with power-law model.</figcaption>
-          </figure>
-
-          <figure class="media-item">
-            <img src="images/NaMy Comp.png" alt="Model and experiment comparison" />
-            <figcaption>Compressive stress vs. strain, with and without oil droplets. Insets show droplet coalescence at different strains.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-text">
-        <p class="project-tag">PhD Research</p>
-        <h3>Air Drag Controls the Finite-Time Singularity of Euler's Disk (in Review)</h3>
-        <p>
-          Experimental analysis of rolling resistance and aerodynamic drag
-          in spinning disks, with applications to mechanical design and
-          dissipative dynamics.
-        </p>
-        <ul>
-          <li>Studied competing mechanisms of energy loss in rotational motion</li>
-          <li>Custom-machined disks and rings and analyzed their motion using stereoscopic high-speed cameras</li>
-          <li>Preprint available on the <a href="https://arxiv.org/abs/2603.14520" target="_blank">arXiv</a></li>
-          
-        </ul>
-      </div>
-
-      <div class="project-media">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/s8i_uF8sjF0"
-            title="Euler disk on glass (slow motion)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="media-grid">
-          <figure class="media-item media-item-large">
-            <img src="images/euler disk portfolio.png" alt="Euler disk experiment" />
-            <figcaption>Experimental setup (top) and tilt-angle vs. time-until-stop for disks of varying mass on glass (bottom).</figcaption>
-          </figure>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-    <section class="section alt">
+    <section id="publications" class="section alt">
       <div class="container">
         <h2>Publications</h2>
         <div class="pub-list">
@@ -223,9 +273,6 @@
         </div>
       </div>
     </section>
-
-     
-
   </main>
 
   <footer class="footer">
@@ -233,5 +280,6 @@
       <p>© 2026 Benjamin Thorne, bthorne@g.harvard.edu</p>
     </div>
   </footer>
+
 </body>
 </html>
