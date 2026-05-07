@@ -96,9 +96,38 @@ code {
 
 /* ── Hero ───────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, #eaf1ff 0%, #ffffff 100%);
+  position: relative;
+  background-image: url('images/Picture1.png');
+  background-size: cover;
+  background-position: center;
   padding: 5rem 0 4rem;
   border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 4, 4, 0.68);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.hero .intro {
+  color: #ffffff;
+}
+
+.hero .subtitle {
+  color: #d1d5db;
+}
+
+.hero .eyebrow {
+  color: #93c5fd;
 }
 
 .eyebrow {
@@ -226,7 +255,7 @@ h2 {
 
 .video-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.75rem;
 }
 
@@ -347,9 +376,5 @@ h2 {
 
   .media-item-large {
     grid-column: auto;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
   }
 }
